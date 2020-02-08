@@ -34,6 +34,6 @@ rm accelerated-domains.china.conf bogus-nxdomain.china.conf toblock-without-shor
 
 wget -N https://raw.githubusercontent.com/jedisct1/dnscrypt-proxy/master/dnscrypt-proxy/example-dnscrypt-proxy.toml
 
-git add .
-git commit -m "`date`"
-git push origin master
+# git add .
+# git commit -m "`date`"
+# git push origin master
