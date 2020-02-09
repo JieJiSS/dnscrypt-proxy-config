@@ -12,16 +12,16 @@ echo '# Thanks to all contributors.' >>dnscrypt-blacklist-ips.txt
 echo '' >>dnscrypt-blacklist-ips.txt
 cat bogus-nxdomain.china.conf | grep -v '^#bogus' | grep bogus-nxdomain | sed 's/bogus-nxdomain=//g' >>dnscrypt-blacklist-ips.txt
 
-wget -N https://github.com/JieJiSS/blocklist/raw/master/toblock-without-shorturl-optimized.lst
-echo '# Converted from https://github.com/JieJiSS/blocklist/blob/master/toblock-without-shorturl-optimized.lst' >dnscrypt-blacklist-domains.txt
-echo '# https://github.com/JieJiSS/blocklist' >>dnscrypt-blacklist-domains.txt
-echo '# Thanks to all contributors.' >>dnscrypt-blacklist-domains.txt
-echo '' >>dnscrypt-blacklist-domains.txt
-echo 'ad.*' >>dnscrypt-blacklist-domains.txt
-echo 'ad[0-9]*' >>dnscrypt-blacklist-domains.txt
-echo 'ads.*' >>dnscrypt-blacklist-domains.txt
-echo 'ads[0-9]*' >>dnscrypt-blacklist-domains.txt
-cat toblock-without-shorturl-optimized.lst | grep -v '^#' | tr -s '\n' | tr A-Z a-z | grep -v '^ad\.' | grep -v -e '^ad[0-9]' | grep -v '^ads\.' | grep -v -e '^ads[0-9]' | rev | sort -n | uniq | rev >>dnscrypt-blacklist-domains.txt
+# wget -N https://github.com/JieJiSS/blocklist/raw/master/toblock-without-shorturl-optimized.lst
+# echo '# Converted from https://github.com/JieJiSS/blocklist/blob/master/toblock-without-shorturl-optimized.lst' >dnscrypt-blacklist-domains.txt
+# echo '# https://github.com/JieJiSS/blocklist' >>dnscrypt-blacklist-domains.txt
+# echo '# Thanks to all contributors.' >>dnscrypt-blacklist-domains.txt
+# echo '' >>dnscrypt-blacklist-domains.txt
+# echo 'ad.*' >>dnscrypt-blacklist-domains.txt
+# echo 'ad[0-9]*' >>dnscrypt-blacklist-domains.txt
+# echo 'ads.*' >>dnscrypt-blacklist-domains.txt
+# echo 'ads[0-9]*' >>dnscrypt-blacklist-domains.txt
+# cat toblock-without-shorturl-optimized.lst | grep -v '^#' | tr -s '\n' | tr A-Z a-z | grep -v '^ad\.' | grep -v -e '^ad[0-9]' | grep -v '^ads\.' | grep -v -e '^ads[0-9]' | rev | sort -n | uniq | rev >>dnscrypt-blacklist-domains.txt
 
 wget -N https://github.com/googlehosts/hosts/raw/master/hosts-files/dnscrypt-proxy-cloaking.txt
 echo '# Converted from https://github.com/googlehosts/hosts/blob/master/hosts-files/dnscrypt-proxy-cloaking.txt' >dnscrypt-cloaking-rules.txt
